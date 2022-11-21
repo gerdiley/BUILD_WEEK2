@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous'>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3'
+        crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand order-lg-1" href="index.html">Music Store</a>
+            <div class="d-lg-flex justify-content-end order-lg-3">
+                <div class="d-inline">
+
+                    <!-- USER ICON -->
+                    <button id="userIcon" type="button" class="btn" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-trigger="focus" data-bs-placement="bottom" data-bs-html="true">
+                        <div id="btnName" class="d-none d-sm-inline text-light me-2 fw-bold"></div>
+                        <i class="bi bi-person-circle text-white"></i>
+                    </button>
+
+                    <!-- CART ICON -->
+                    <button id="btnCart" type="button" class="btn">
+                        <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#cartOff" href="#cartOff">
+                            <i class="bi bi-cart text-white"></i>
+                        </a>
+                    </button>
+
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html?cat=0">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info d-block" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" href="#offcanvas" id="navLogin">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning d-none" id="navLogout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS LOGIN -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Sign In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <label for="username" class="mt-2 fw-semibold">USERNAME</label>
+                <input type="text" class="form-control" id="username" placeholder="Username or your email">
+                <p id="errUser" class="text-success"></p>
+
+                <label for="password" class="mt-2 fw-semibold">PASSWORD</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+                <p id="errPass" class="text-danger"></p>
+
+                <button type="button" class="btn btn-danger mt-2" id="btnIn">SIGN IN</button>
+            </form>
+            <br>
+            <h3 class="pt-2 text-center">Not registered?</h3>
+            <a class="pt-2 fw-semibold d-flex justify-content-center btn btn-danger " href="signup.html">SIGN UP</a>
+        </div>
+    </div>
+
+    <!-- OFFCANVAS CART -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOff" aria-labelledby="cartOff">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title h2" id="cartOffLabel">Your cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="cartScroll">
+            <div class="offcanvas-body">
+                <p id="empty" class="text-secondary ms-3 mb-0 fst-italic fs-5"></p>
+                <ul id="cart" class="list-group"></ul>
+            </div>
+        </div>
+        <p class="text-center fs-4" id="cartTotal"></p>
+        <button type="button" class="btn btn-warning py-3" id="btnCheckout">CHECKOUT</button>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container mt-5">
+        <div class="row pt-3 pt-md-5">
+            <div class="col-12">
+
+                <h1 class="p-2">ABOUT <span>MUSIC STORE</span></h1>
+                <p class="p-2 mb-0">
+                    Since 1985 we've been importing products directly from manufacturers, offering our customers the
+                    best prices
+                    on the market. Thanks to our experience, we select only the best brands, guaranteeing high quality
+                    products
+                    for a convenient price.
+                </p>
+
+                <!-- BRANDS -->
+                <div class="container d-flex flex-wrap py-3">
+                    <div class="row justify-content-center">
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://loghi-famosi.com/wp-content/uploads/2021/02/Ibanez-Logo-650x366.png"
+                                class="img-fluid p-2" alt="ibanez">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://1000marche.net/wp-content/uploads/2020/11/Yamaha-Logo-1967.png"
+                                class="img-fluid p-2" alt="yamaha">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://1000marche.net/wp-content/uploads/2021/11/Fender-Logo-500x313.png"
+                                class="img-fluid p-2" alt="fender">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://loghi-famosi.com/wp-content/uploads/2021/02/Gibson-Logo-650x366.png"
+                                class="img-fluid p-2" alt="gibson">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Jackson_guitars_logo.svg/300px-Jackson_guitars_logo.svg.png"
+                                class="img-fluid pt-3 p-2" alt="jackson">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://www.thomann.de/thumb/opengraphnb/pics/herstlogos/gretsch.gif"
+                                class="img-fluid p-2" alt="gretsch">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://www.sanremorock.it/wp-content/uploads/2019/04/logo-eko-est1959.png"
+                                class="img-fluid p-2" alt="eko">
+                        </div>
+                        <div class="m-2 border border-white brandsGallery">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Takamine_guitar_logo.svg/300px-Takamine_guitar_logo.svg.png"
+                                class="img-fluid pt-4 p-2" alt="takamine">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi placeat, qui reiciendis numquam,
+                    neque
+                    labore facere quaerat atque rem non ipsum vitae quisquam illo accusamus, consequuntur fuga culpa nam
+                    recusandae. Itaque eaque dolorem eius necessitatibus tenetur, iusto vel sint magni, error similique
+                    temporibus animi debitis eum corrupti dolore distinctio! Sed ullam sapiente aperiam.<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, expedita! Ex minus soluta
+                    cumque
+                    eaque asperiores blanditiis sed voluptatem dolorem consequuntur voluptate perspiciatis adipisci,
+                    illum
+                    porro, quia perferendis necessitatibus enim.
+                </p>
+
+                <!-- GALLERY -->
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1564528183203-ec84690e06a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&h=780&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+
+                        <img src="https://images.unsplash.com/photo-1608663003920-757dd225d6c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1550291652-6ea9114a47b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+
+                        <img src="https://images.unsplash.com/photo-1584882793511-33ac865aedb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+
+                        <img src="https://images.unsplash.com/photo-1624367171718-14026220ee35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Image" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-fluid mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 py-3 py-lg-5 px-2 px-lg-5" id="socials">
+                        <h6 class="text-white fw-semibold">SOCIAL</h6>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-facebook fs-3 pe-1"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-twitter fs-3 pe-1"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-linkedin fs-3 pe-1"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-instagram fs-3"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-3 py-3 py-lg-5 px-2 px-lg-5">
+                        <h6 class="text-light fw-semibold">CONTACTS</h6>
+                        <p>
+                            <a href="mailto:musicstore@gmail.com" class="text-decoration-none">
+                                <i class="bi bi-envelope me-2"></i>
+                                musicstore@gmail.com
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:+393524688510" class="text-decoration-none">
+                                <i class="bi bi-telephone-fill me-2"></i>
+                                (+39) 3524688510
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 py-3 py-lg-5 px-2 px-lg-5">
+                        <h6 class="text-light fw-semibold">SUBSCRIBE</h6>
+                        <input type="email" id="email" class="form-control mb-1" placeholder="Enter your email">
+                        <button type="button" class="btn btn-danger">Subscribe</button>
+                    </div>
+                    <div class="col-md-3 py-3 py-lg-5 px-2 px-lg-5" id="workWithUs">
+                        <h6 class="text-light fw-semibold">WORK WITH US</h6>
+                        <p class="text-light"><a href="#" class="text-decoration-none">Careers</a></p>
+                        <p class="text-light"><a href="#" class="text-decoration-none">Sponsorship program</a></p>
+                    </div>
+                </div>
+                <div class="row pb-3 mt-3 mt-lg-0">
+                    <div class="col-12">
+                        <p class="text-center text-light">&copy; All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="assets/js/scriptIndex.js"></script>
+    <script src="assets/js/scriptLogin.js"></script>
+    <script src="assets/js/scriptCart.js"></script>
+</body>
+
+</html>

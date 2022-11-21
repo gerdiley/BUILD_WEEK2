@@ -1,0 +1,204 @@
+{
+  "users": [
+    {
+      "firstname": "Gerardo",
+      "surname": "Di Letizia",
+      "email": "gerardodiletizia@gmail.com",
+      "user": "gerardodiletizia",
+      "password": "Gerardo1!",
+      "id": 1
+    },
+    {
+      "firstname": "Angelo",
+      "surname": "Midolo",
+      "email": "angelomidolo@gmail.com",
+      "user": "angelomidolo",
+      "password": "Angelo1!",
+      "id": 2
+    },
+    {
+      "firstname": "Serena",
+      "surname": "Mude-Koko",
+      "email": "serenamudekoko@gmail.com",
+      "user": "serena",
+      "password": "Serena1!",
+      "id": 3
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "idCat": 1,
+      "title": "Fender Stratocaster",
+      "price": 2000,
+      "description": "Fender American Vintage II 1957 Stratocaster; electric guitar; body: Ash; neck: 1-Piece Maple; fingerboard: Maple; neck shape: 1957",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/548645/17480122_800.jpg"
+    },
+    {
+      "id": 2,
+      "idCat": 1,
+      "title": "Fender Telecaster",
+      "price": 700,
+      "description": "Body: Alder, Maple neck, Fretboard: Maple, Matte neck finish",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/439170/13994796_800.jpg"
+    },
+    {
+      "id": 3,
+      "idCat": 1,
+      "title": "Gibson Les Paul",
+      "price": 2300,
+      "description": "Body: Mahogany, Cream-colored body binding, Top: Maple, Neck: Mahogany",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/462505/14249288_800.jpg"
+    },
+    {
+      "id": 4,
+      "idCat": 1,
+      "title": "Gretch Electromatic",
+      "price": 900,
+      "description": "Construction: Hollowbody with double cut, Body: Maple laminated with trestle block, Body depth: 57 mm (2.25) , Neck: Maple, Fretboard: Laurel",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/535960/17205238_800.jpg"
+    },
+    {
+      "id": 5,
+      "idCat": 2,
+      "title": "Yamaha Piano",
+      "price": 60000,
+      "description": "88 Keys, 3 Pedals (centre pedal: single-note sustain pedal), Length: 212 cm, Width: 154 cm, Height: 102 cm, Weight: 433 kg",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/536581/16971395_800.jpg"
+    },
+    {
+      "id": 6,
+      "idCat": 2,
+      "title": "Kawai Piano",
+      "price": 9000,
+      "description": "Kawai K-300 AURES 2 E/P - piano with AURES 2 system, 88 keys, 3 pedals. exclusive Millennium III Upright Action with ABS-Carbon Composites, double delted hammers, Kawai headphone SH-9 included, Mahogany Core Hammers, dimensions: 122 x 149 x 61 cm. Weight: 227kg",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/523281/16822513_800.jpg"
+    },
+    {
+      "id": 7,
+      "idCat": 2,
+      "title": "Blüthner Piano",
+      "price": 16900,
+      "description": "Colourful and continuous chamber music sound in all octave ranges. Technologically perfected Blüthner soundboard construction. Incomparable dynamics in terms of the modulation capacity of the tone and a quick repetition of the action make this piano the ideal partner for demanding musical study. Height: 116.5 cm - Width: 154 cm - Depth: 61.5 cm - Colour: White Polished - Piano bench and piano light included - Made in Germany",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/351364/9184361_800.jpg"
+    },
+    {
+      "id": 8,
+      "idCat": 2,
+      "title": "Yamaha Genos",
+      "price": 4300,
+      "description": "76 Velocity-sensitive keys with aftertouch. 1652 Sounds + 58 Drum / SFX Kits. 256 Voice polyphony. 550 Styles. 6 Continuous rotary knobs. 9 Sliders. 358 Preset DSPs, up to 28 insert DSP effects. Vocal harmony & synth Vocoder. Expansion Voice internal 1.8 GB",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/422200/12853122_800.jpg"
+    },
+    {
+      "id": 9,
+      "idCat": 3,
+      "title": "Yamaha Violin",
+      "price": 1600,
+      "description": "Solid wood Guarneri model. Top: Solid spruce. Back: Solid, beautifully flamed maple back. Applied by hand, shaded oil-finish. Fingerboard: Ebony. Tuning pegs, chinrest and tailpiece: Boxwood",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/111064/862239_800.jpg"
+    },
+    {
+      "id": 10,
+      "idCat": 3,
+      "title": "Stentor Harlequin",
+      "price": 170,
+      "description": "Solid spruce top. Maple sides. Solid tonewood base. Black stained hardwood fretboard. Pau Rosa pegs. Hardwood chin-rest. Light metal tailpiece with four fine-tuners. Case with reflectors and shoulder-strap. Colour: White. Includes case and bow",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/461607/14234398_800.jpg"
+    },
+    {
+      "id": 11,
+      "idCat": 3,
+      "title": "Stentor Arcadia Antik",
+      "price": 770,
+      "description": "Arcadia Antik model. Size: 4/4. Made by hand. Solid spruce top. Solid maple body. Heavily flamed. Pegs, fingerboard and chin rest made of ebony. Pirastro Tonica stringing. Antique finish",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/137905/9514980_800.jpg"
+    },
+    {
+      "id": 12,
+      "idCat": 3,
+      "title": "Karl Höfner Violin",
+      "price": 1300,
+      "description": "Model H68HV-V. Size: 4/4. Built completely out of solid wood. Spruce top. Beautifully flamed maple back. Hand-applied lacquer in Italian style. Dominant strings. Incl. H90/517-V case and H7/13-V bow",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/357601/13571046_800.jpg"
+    },
+    {
+      "id": 13,
+      "idCat": 4,
+      "title": "Millenium Focus Junior",
+      "price": 185,
+      "description": "Focus Series. Suitable for children from 4 - 7 years and older. Drum shells feature a wrap finish. Muffling cushion for the bass drum. Colour: Black. Includes a drum throne",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/496064/15776950_800.jpg"
+    },
+    {
+      "id": 14,
+      "idCat": 4,
+      "title": "Millenium Hybrid",
+      "price": 600,
+      "description": "Complete Drum Kit. Studio configuration. 9-Ply poplar / birchwood shell. Shells with wrap finish. 1.5 mm metal hoops on snare and toms. Wooden hoops on bass drum in shell colour. Colour: Blue Lining.",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/473083/14843466_800.jpg"
+    },
+    {
+      "id": 15,
+      "idCat": 4,
+      "title": "Millenium Focus 22 White",
+      "price": 340,
+      "description": "Focus Series. Especially suitable for ambitious beginners. Drum shells feature a wrap finish. Muffling cushion for the bass drum and tom/snare sound control rings. Colour: White. Includes a drum throne",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/509659/15988039_800.jpg"
+    },
+    {
+      "id": 16,
+      "idCat": 4,
+      "title": "Millenium Youngster",
+      "price": 120,
+      "description": "Perfect for drummers as of 3 years old. Shell material: Hardwood. Black hardware. Drum shell with robust film finish. Colour: Green Sparkle",
+      "image": "https://th.static-thomann.de/thumb/padthumb600x600/pics/bdb/395080/11680618_800.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Guitars",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/535960/17205238_800.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Piano",
+      "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/536581/16971395_800.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Violins",
+      "image": "https://bdbo2.thomann.de/thumb/bdb3000/pics/bdbo/9514980.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Drums",
+      "image": "https://bdbo1.thomann.de/thumb/bdb3000/pics/bdbo/14843466.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "idUser": 1,
+      "articles": [],
+      "id": 1
+    },
+    {
+      "idUser": 2,
+      "articles": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "id": 2
+    },
+    {
+      "idUser": 4,
+      "articles": [
+        1
+      ],
+      "id": 3
+    }
+  ]
+}
